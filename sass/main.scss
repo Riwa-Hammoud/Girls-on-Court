@@ -1,0 +1,38 @@
+//custom variables
+$primary: #df583b;
+$darker-primary: darken($primary, 10%);
+
+// import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Customize button-secondary
+// Customize button-secondary
+.btn-secondary {
+    background-color: $primary;
+    border-color: $primary;
+    color: white;
+
+    &:hover {
+        background-color: $darker-primary;
+        border-color: $darker-primary;
+    }
+
+    &:focus,
+    &:active,
+    &.active,
+    .show > .btn-secondary.dropdown-toggle {
+        background-color: darken($primary, 15%);
+        border-color: darken($primary, 15%);
+        color: white;
+    }
+
+    // Handle the case when the button is clicked (active state)
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        background-color: darken($primary, 15%);
+        border-color: darken($primary, 15%);
+        color: white;
+    }
+}
+
+
